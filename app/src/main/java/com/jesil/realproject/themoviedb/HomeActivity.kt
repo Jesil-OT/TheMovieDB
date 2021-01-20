@@ -34,7 +34,7 @@ class HomeActivity : AppCompatActivity() {
             .create(MovieRetrofit::class.java)
 
         CoroutineScope(IO).launch {
-            val response = service.search(API_KEY, page = 3)
+            val response = service.getMovies(API_KEY, page = 3)
 
             Log.d(TAG, "onCreate: ${response.results}")
 
