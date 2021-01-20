@@ -3,18 +3,13 @@ package com.jesil.realproject.themoviedb.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.RatingBar
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 import com.jesil.realproject.themoviedb.R
-import com.jesil.realproject.themoviedb.model.Result
-import kotlinx.android.synthetic.main.item_view.view.*
 
+/*
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
-    private var resultItems : List<Result> = ArrayList<Result>()
+   // TODO(" use list Adapter ")
+   // private var resultItems : List<Result> = ArrayList<Result>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -39,25 +34,23 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
         itemView : View
     ): RecyclerView.ViewHolder(itemView){
 
-        private val movieTitle: TextView = itemView.textView_movie_title
-        private val movieImage: ImageView = itemView.imageView_movie_src
-        private val movieRatingBarVoteAverage : RatingBar = itemView.ratingBar_movie_voteAverage
+//        private val movieTitle: TextView = itemView.textView_movie_title
+//        private val movieImage: ImageView = itemView.imageView_movie_src
+//        private val movieRatingBarVoteAverage : RatingBar = itemView.ratingBar_movie_voteAverage
 
         fun bind(resultData : Result){
-            val requestOptions = RequestOptions()
-                .placeholder(R.drawable.ic_launcher_background)
-                .error(R.drawable.ic_launcher_background)
-
-            movieTitle.text = resultData.title
-            movieRatingBarVoteAverage.rating = resultData.vote_average.toFloat()
-            Glide.with(itemView.context)
-                .load(resultData.backdrop_path)
-                .into(movieImage)
+//            val requestOptions = RequestOptions()
+//                .placeholder(R.drawable.ic_launcher_background)
+//                .error(R.drawable.ic_launcher_background)
+//
+//            movieTitle.text = resultData.title
+//            movieRatingBarVoteAverage.rating = resultData.vote_average.toFloat()
+//            Glide.with(itemView.context)
+//                .load(resultData.backdrop_path)
+//                .into(movieImage)
         }
     }
 
     fun setMovieData(movies: List<Result>){
         resultItems = movies
-    }
-
-}
+    }*/
