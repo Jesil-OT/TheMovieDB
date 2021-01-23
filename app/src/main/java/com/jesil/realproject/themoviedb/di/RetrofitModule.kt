@@ -3,6 +3,7 @@ package com.jesil.realproject.themoviedb.di
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.jesil.realproject.themoviedb.constant.Constant.BASE_URL
+import com.jesil.realproject.themoviedb.model.NetworkMapper
 import com.jesil.realproject.themoviedb.retrofit.MovieRetrofit
 import dagger.Module
 import dagger.Provides
@@ -18,6 +19,11 @@ object RetrofitModule {
 
     @Provides
     @Singleton
+    fun provideNetworkMapper() : NetworkMapper =
+        NetworkMapper()
+
+    @Provides
+    @Singleton
     fun provideGson() : Gson =
          GsonBuilder()
             .excludeFieldsWithoutExposeAnnotation()
@@ -30,8 +36,15 @@ object RetrofitModule {
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
 
+    @Provides
+    @Singleton
     fun provideMovieRetrofit(retrofit: Retrofit.Builder): MovieRetrofit =
         retrofit
             .build()
             .create(MovieRetrofit::class.java)
+
+    @Provides
+    @Singleton
+    fun provideApiKey() : String =
+        "c1b462f1d75f8a57e893f710a5f2068a"
 }
